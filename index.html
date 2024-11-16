@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexaFusion Technologies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(135deg, #006eff88, #00ff2286);
+            overflow: hidden;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgb(255, 0, 0), transparent);
+            animation: moveCircle 20s infinite ease-in-out;
+            opacity: 0.3;
+        }
+
+        @keyframes moveCircle {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            50% {
+                transform: translate(200px, 300px) scale(1.5);
+            }
+        }
+
+        .message-container {
+            position: relative;
+            margin-top: 200px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .message {
+            margin-bottom: 25px;
+            font-size: 2.5rem;
+            line-height: 1.5;
+            color: #313131;
+            background: none;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .message span {
+            margin-left: 10px;
+            margin-bottom: 25px;
+            display: inline-block;
+            animation: float 2.5s infinite ease-in-out;
+        }
+
+        .highlight {
+            color: #5d00ff;
+            font-weight: bold;
+        }
+
+        .cta {
+            margin-top: 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 20px 25px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(45deg, #0078ff, #00bfff);
+            border-radius: 45px;
+            box-shadow: 0 4px 15px rgba(0, 150, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .cta a:hover {
+            background: linear-gradient(45deg, #0048bd, #0079d0);
+            box-shadow: 0 6px 20px rgba(0, 150, 255, 0.7);
+            transform: scale(1.1);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(15px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #282828;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="circle" style="width: 250px; height: 250px; top: 10%; left: 15%;"></div>
+        <div class="circle" style="width: 300px; height: 300px; bottom: 10%; right: 10%;"></div>
+        <div class="circle" style="width: 180px; height: 180px; top: 50%; right: 15%;"></div>
+        <div class="circle" style="width: 120px; height: 120px; bottom: 25%; left: 30%;"></div>
+    </div>
+
+    <div class="message-container">
+        <h1 class="message">
+            Hey there, thanks for visiting!
+        </h1>
+        <h2 class="message">
+            We’ve upgraded our domain to <span class="highlight">hexafusion.co.in</span>
+        </h2>
+        <div class="cta">
+            <a href="https://hexafusion.co.in" target="_blank">Visit Our New Domain</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        HexaFusion Technologies | All Rights Reserved &copy; 2024
+    </div>
+</body>
+</html>
