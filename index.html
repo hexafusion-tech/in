@@ -49,9 +49,10 @@
 
         .message-container {
             position: relative;
-            margin-top: 200px;
+            margin: 150px auto;
             text-align: center;
             z-index: 10;
+            width: 90%;
         }
 
         .message {
@@ -81,7 +82,7 @@
 
         .cta a {
             display: inline-block;
-            padding: 20px 25px;
+            padding: 15px 20px;
             font-size: 1.3rem;
             font-weight: bold;
             text-decoration: none;
@@ -108,13 +109,46 @@
         }
 
         .footer {
-            position: absolute;
-            bottom: 20px;
+            position: relative;
+            margin-top: 50px;
             width: 100%;
             text-align: center;
             font-size: 0.9rem;
             color: #ffffff;
             z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .message {
+                font-size: 2rem;
+                padding: 0 10px;
+            }
+
+            .cta a {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+
+            .footer {
+                font-size: 0.8rem;
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .message {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+
+            .cta a {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+
+            .footer {
+                font-size: 0.7rem;
+            }
         }
     </style>
 </head>
